@@ -1,5 +1,5 @@
 <?php
-$kotas = [
+$datas = [
     [
         'nama' => 'suryo',
         'alamat' => 'rappocini',
@@ -11,6 +11,6 @@ $kotas = [
         'telepon' => '083'
     ]
 ];
-foreach ($kotas as $kota):
-    echo "<li>$kota</li>";
+foreach ($datas as $data):
+    echo "<li>" . $data['nama'] . " " . $data['alamat'] . "</li>";
 endforeach;
