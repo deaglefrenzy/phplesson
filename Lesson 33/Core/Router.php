@@ -43,11 +43,11 @@ class Router
     public function route($uri, $method)
     {
         foreach ($this->routes as $route) {
-            if ($route['uri'] === $uri && $route['method'] === strtoupper($method)) {
+            $rr = explode('&', $uri)[0];
+            if ($route['uri'] === $rr && $route['method'] === strtoupper($method)) {
                 return require base_path($route['controller']);
             }
         }
-
         $this->abort();
     }
 
